@@ -8,16 +8,13 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = Reference.MOD_ID,
-        name = Reference.NAME,
-        version = Reference.VERSION)
+@Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION)
 public class Main {
 
     @Mod.Instance
     public static Main instance;
 
-    @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS,
-                serverSide = Reference.COMMON_PROXY_CLASS)
+    @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.COMMON_PROXY_CLASS)
     public static CommonProxy proxy;
 
     @Mod.EventHandler
